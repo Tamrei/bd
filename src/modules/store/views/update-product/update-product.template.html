@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-xs-12 col-sm-8">
+        <h4 class="ui top attached header">
+            Update product
+        </h4>
+
+        <div class="ui attached segment">
+            <product-form [product]="product" (submitEvent)="submit()"></product-form>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+        <h4 class="ui top attached header">
+            Preview
+        </h4>
+
+        <div class="ui attached segment">
+            <product-detailed [id]="product.id"
+                              [image]="product.image"
+                              [title]="product.title"
+                              [description]="product.description"
+                              [price]="product.price"></product-detailed>
+        </div>
+    </div>
+</div>

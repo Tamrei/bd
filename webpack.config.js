@@ -25,7 +25,7 @@ var webpackConfig = {
         new webpack.DefinePlugin({
             "require.specified": "require.resolve"
         }),
-        //new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {

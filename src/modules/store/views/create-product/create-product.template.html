@@ -1,8 +1,10 @@
 <div class="container">
     <div class="col-xs-12 col-sm-8">
-        <h4 class="ui top attached header">
-            Add new product
-        </h4>
+        <div class="ui attached message">
+            <div class="header">
+                Create new product
+            </div>
+        </div>
 
         <div class="ui attached segment">
             <product-form [product]="product" (submitEvent)="submit()"></product-form>
@@ -10,9 +12,11 @@
     </div>
 
     <div class="col-xs-12 col-sm-4">
-        <h4 class="ui top attached header">
-            Preview
-        </h4>
+        <div class="ui attached message">
+            <div class="header">
+                Preview
+            </div>
+        </div>
 
         <div class="ui attached segment">
             <product-detailed [id]="product.id"

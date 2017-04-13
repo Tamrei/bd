@@ -5,6 +5,7 @@ import {Component, Input} from "@angular/core";
     template: `     
 <div class="ui centered card">
   <div class="image">
+  <a class="ui teal ribbon label"><i class="dollar icon"></i>{{price}}</a>
     <img src="{{image}}">
   </div>
   <div class="content">
@@ -15,12 +16,6 @@ import {Component, Input} from "@angular/core";
     <div class="description">
       {{description}}
     </div>
-  </div>
-  <div class="extra content">
-    <a>
-      <i class="dollar icon"></i>
-      {{price}}
-    </a>
   </div>
 </div>
 `,

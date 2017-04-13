@@ -4,10 +4,10 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
     selector: 'product',
     template: `     
 <div class="ui card" style="margin-bottom: 15px;">
-    <div class="image" (click)="click()">
+    <a class="image" (click)="click()">
           <a class="ui teal ribbon label"><i class="dollar icon"></i>{{price}}</a>
-      <img width="100" height="100" src="{{image}}">
-    </div>
+      <img src="{{image}}">
+    </a>
     <div class="content" (click)="click()">
       <div class="header">{{title}}</div>
       <div class="description">

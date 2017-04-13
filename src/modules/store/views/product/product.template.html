@@ -4,13 +4,43 @@
         Product
     </h4>
 
-    <div class="ui attached segment">
+    <div class="ui attached segment" style="display: inline-block;">
+        <div class="col-xs-12 col-sm-4">
             <product-detailed [id]="product.id"
                               [image]="product.image"
                               [title]="product.title"
                               [description]="product.description"
                               [price]="product.price">
             </product-detailed>
+        </div>
+
+        <div class="col-xs-12 col-sm-8">
+            <h4 class="ui horizontal divider header">
+                <i class="bar chart icon"></i>
+                Specifications
+            </h4>
+
+            <table class="ui definition table">
+                <tbody>
+                <tr>
+                    <td class="two wide column">Image url</td>
+                    <td class="break-word">{{product.image}}</td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td class="break-word">{{product.title}}</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td class="break-word">{{product.description}}</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td class="break-word">$ {{product.price}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

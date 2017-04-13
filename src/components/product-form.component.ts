@@ -6,6 +6,7 @@ import {ImageUtilsService} from "../utils/image.utils";
     selector: 'product-form',
     template: `     
             <form class="ui large form" #productForm="ngForm" [ngClass]="{'loading': loading}" (ngSubmit)="submit()">
+            <div class="two fields">
                 <div class="field">
                     <label>Title</label>
                     <input type="text" name="title" placeholder="Title"
@@ -14,6 +15,16 @@ import {ImageUtilsService} from "../utils/image.utils";
                     <div *ngIf="!title.valid && !title.pristine" class="ui pointing red basic label">
                         Please enter a value
                     </div>
+                </div>
+                  <div class="field">
+                    <label>Price</label>
+                    <input type="number" name="price" placeholder="Price"
+                           [(ngModel)]="product.price"
+                           #price="ngModel" required>
+                    <div *ngIf="!price.valid && !price.pristine" class="ui pointing red basic label">
+                        Please enter a value
+                    </div>
+                </div>
                 </div>
                 <div class="ui divider"></div>
 
@@ -42,17 +53,6 @@ import {ImageUtilsService} from "../utils/image.utils";
 
                     <div *ngIf="!isImageValid && !image.pristine" class="ui pointing red basic label">
                         Image is invalid
-                    </div>
-                </div>
-                <div class="ui divider"></div>
-
-                <div class="field">
-                    <label>Price</label>
-                    <input type="number" name="price" placeholder="Price"
-                           [(ngModel)]="product.price"
-                           #price="ngModel" required>
-                    <div *ngIf="!price.valid && !price.pristine" class="ui pointing red basic label">
-                        Please enter a value
                     </div>
                 </div>
                 <div class="ui divider"></div>

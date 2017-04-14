@@ -8,6 +8,7 @@
     "postinstall": "npm run typings-install",
     "build": "webpack --inline --colors --progress --display-error-details --display-cached",
     "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --host 0.0.0.0 --port 3012  --content-base src",
+    "server2": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached",
     "start": "npm run server"
   },
   "dependencies": {

@@ -3,6 +3,8 @@ import {Router} from "@angular/router";
 import {IProduct} from "../../../../models/product.model";
 import {ProductsService} from "../../../../service/product.service";
 
+declare var alertify:any;
+
 @Component({
     selector: 'mainView',
     templateUrl: 'main.template.html'
@@ -24,10 +26,16 @@ export class MainView {
     }
 
     private deleteProduct(id) {
-        if (confirm("Are you sure that you want to delete this product ?")) {
-            this.productService.deleteProduct(id);
-            this.products = this.productService.getProducts();
-        }
+        // if (confirm("Are you sure that you want to delete this product ?")) {
+        //     this.productService.deleteProduct(id);
+        //     this.products = this.productService.getProducts();
+        // }
+
+        alertify.confirm("Confirm", "Are you sure that you want to delete this product ?",
+            () => {
+                this.productService.deleteProduct(id);
+                this.products = this.productService.getProducts();
+            }, null);
     }
 
     private updateProduct(id) {

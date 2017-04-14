@@ -15,6 +15,13 @@ var webpackConfig = {
         path: './dist'
     },
 
+    devServer: {
+        port: 3012,
+        historyApiFallback: {
+            index: 'index.html'
+        }
+    },
+
     plugins: [
         new ExtractTextPlugin("styles.css"),
         new webpack.optimize.OccurenceOrderPlugin(true),
@@ -25,7 +32,7 @@ var webpackConfig = {
         new webpack.DefinePlugin({
             "require.specified": "require.resolve"
         }),
-        new webpack.optimize.UglifyJsPlugin()
+        //new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {

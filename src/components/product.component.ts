@@ -21,8 +21,8 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
 </div>
 `,
     styles: [`img {
-        max-height: 200px;
-        min-height: 200px;
+        max-height: 150px;
+        min-height: 150px;
     }`]
 })
 export class ProductComponent {

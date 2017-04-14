@@ -18,7 +18,7 @@ export class CreateProductView {
         this.product = {
             id: (Math.random()*101|0) + '',
             image: "",
-            title: "Default title",
+            title: "",
             description: "",
             price: 1
         }

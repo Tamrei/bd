@@ -7,7 +7,7 @@
     "typings-install": "typings install",
     "postinstall": "npm run typings-install",
     "build": "webpack --inline --colors --progress --display-error-details --display-cached",
-    "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --host 0.0.0.0 --port 3012  --content-base src",
+    "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --host 0.0.0.0 --port 3014  --content-base src",
     "server2": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached",
     "start": "npm run server"
   },
@@ -26,7 +26,7 @@
     "core-js": "^2.4.1",
     "ie-shim": "^0.1.0",
     "lodash": "^4.17.4",
-    "semantic-ui": "^2.1.8",
+    "semantic-ui": "2.2.10",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.1.0",
     "systemjs": "0.19.27",
